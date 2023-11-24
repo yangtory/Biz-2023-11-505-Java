@@ -18,6 +18,7 @@ public class AlgE {
 		
 		num1 = 3587964;
 		num1 = num1 % 1000000;
+		System.out.println(num1);
 		num1 = num1 / 100000;
 		System.out.println(num1);
 		
