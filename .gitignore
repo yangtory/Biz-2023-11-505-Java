@@ -144,3 +144,8 @@ typings/
 
 # ETC
 .bak
+
+# 맥북 파일 안올리기
+.DS_Store
+.Ds_Store
+.Ds_store
