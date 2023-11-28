@@ -26,7 +26,7 @@ public class ArraysD {
 			}
 		}
 		System.out.println(sum);				
-	}
+	} 
 }
 
 		
