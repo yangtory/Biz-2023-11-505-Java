@@ -40,8 +40,6 @@ public class ArraysF {
 			avgs[i] = (float) sums[i] / 3;
 		}
 
-		// 과목별 합계 만드기
-
 		// 춣력
 		System.out.println("=".repeat(80));
 		System.out.println(" 샛별반 성적표");

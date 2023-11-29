@@ -15,7 +15,8 @@ public class ArraysE {
 		int[] totals = new int[3];
 		int allTotal = 0;
 		float[] avgTotals = new float[3];
-		float[] allAvg = 0.0;
+		int avgTotal= 0;
+		int allAvg = 0;
 		
 
 		// 점수 만들기
@@ -43,7 +44,9 @@ public class ArraysE {
 		}
 		for (int i = 0; i < STUDENT_LENGTH; i++) {
 			avgs[i] = (float) sums[i] / 3;
+			avgTotal += (int) avgs[i];
 		}
+		allAvg = avgTotal / STUDENT_LENGTH ;
 
 		// 과목별 합계 만드기
 		for (int i = 0; i < STUDENT_LENGTH; i++) {
