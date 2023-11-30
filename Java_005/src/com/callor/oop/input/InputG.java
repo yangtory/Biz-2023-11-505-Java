@@ -21,22 +21,27 @@ public class InputG {
 				System.out.println("입력한 값 : " + num);
 				continue;
 			}
-			if(num < 2 ) {
+			if (num < 2) {
 				System.out.println("값은 2 이상 입력하세요");
 				System.out.println("입력한 값 : " + num);
 			}
-			if(num % 2 == 0) {
+			if (num % 2 == 0) {
 				System.out.println("짝수입니다");
-				System.out.println("입력한 값 : "+ num);
-			}else {
+				System.out.println("입력한 값 : " + num);
+			} else {
 				System.out.println("짝수가 아닙니다");
 			}
-		}
-		for (int i = 0 ; i < num ; i++) {	
-			if(num % 2 ==0) {
-				break;
+			int i = 0;
+			for (i = 0; i < num; i++) {
+				if (num % 2 == 0) {
+					break;
+				}
 			}
-			
+			if (i < num) {
+				System.out.printf("  %d 는 소수가 아님\n", num);
+			} else {
+				System.out.printf("  %d 는 소수임\n", num);
+			}
 		}
 	}
 
