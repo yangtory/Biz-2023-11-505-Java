@@ -24,16 +24,18 @@ public class InputG {
 			if (num < 2) {
 				System.out.println("값은 2 이상 입력하세요");
 				System.out.println("입력한 값 : " + num);
+				continue;
 			}
 			if (num % 2 == 0) {
 				System.out.println("짝수입니다");
 				System.out.println("입력한 값 : " + num);
 			} else {
 				System.out.println("짝수가 아닙니다");
+				continue;
 			}
 			int i = 0;
-			for (i = 0; i < num; i++) {
-				if (num % 2 == 0) {
+			for (i = 2; i < num ; i++) {
+				if (num % i == 0) {
 					break;
 				}
 			}
@@ -44,5 +46,4 @@ public class InputG {
 			}
 		}
 	}
-
 }
