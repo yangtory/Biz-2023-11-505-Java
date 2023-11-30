@@ -44,9 +44,12 @@ public class ArraysE {
 		}
 		for (int i = 0; i < STUDENT_LENGTH; i++) {
 			avgs[i] = (float) sums[i] / 3;
-			avgTotal += (int) avgs[i];
+			
 		}
-		allAvg = avgTotal / STUDENT_LENGTH ;
+		for(int i = 0 ; i < STUDENT_LENGTH ; i++) {
+		avgTotal += (int) avgs[i];
+		allAvg += (int)avgTotals[i];
+		}
 
 		// 과목별 합계 만드기
 		for (int i = 0; i < STUDENT_LENGTH; i++) {
@@ -70,7 +73,7 @@ public class ArraysE {
 		}
 		System.out.println("-".repeat(80));
 		System.out.printf("\t%3d\t%3d\t%3d\t%3d\n", totals[0], totals[1], totals[2], allTotal);
-		System.out.printf("\t%5.2f\t%5.2f\t%5.2f\n", avgTotals[0], avgTotals[1], avgTotals[2], allAvg);
+		System.out.printf("\t%5.2f\t%5.2f\t%5.2f\n", avgTotals[0], avgTotals[1], avgTotals[2], allAvg/STUDENT_LENGTH);
 		System.out.println("=".repeat(80));
 		}
 	}
