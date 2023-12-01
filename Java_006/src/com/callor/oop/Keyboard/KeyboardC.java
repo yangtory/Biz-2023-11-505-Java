@@ -17,31 +17,30 @@ public class KeyboardC {
 		int rndNum = (int) (Math.random() * 10);
 		int i = 0; // 시도한 횟수 세기
 		
+		
 		while (true) {
 			System.out.println("=".repeat(30));
 			System.out.println("숫자 맞추기 ");
 
 			System.out.print("정수 >> ");
 			String str = scan.nextLine();
-			
+
 			// 정수가 아닌 값
 			try {
 				num = Integer.valueOf(str);
 			} catch (Exception e) {
 				System.out.println("정수를 입력하세요");
-				System.out.printf("%d 번째 정답 못 맞춤 실패", i+1);
 				i++;
 				continue;
 			}
-			
+
 			// 10까지의 정수만 받기
-			if (num <= 1  || num > 11) {
+			if (num <= 1 || num > 11) {
 				System.out.println("10 까지의 정수를 입력하세요");
-				System.out.printf("%d 번째 정답 못 맞춤 실패", i+1);
 				i++;
 				continue;
 			}
-			
+
 			// 맞췄을때, 그게아니면 큰지 작은지 검사
 			if (num == rndNum) {
 				System.out.println("참잘했어요 : " + num);
@@ -49,14 +48,17 @@ public class KeyboardC {
 				break;
 			} else if (num > rndNum) {
 				System.out.println("값이 너무 커요");
-				System.out.printf("%d 번째 정답 못 맞춤 실패", i+1);
 				i++;
 			} else if (num < rndNum) { // 처음에 if 만 썼는데 esle if로 쓰면 좋음
 				System.out.println("값이 너무 작아요");
-				System.out.printf("%d 번째 정답 못 맞춤 실패", i+1);
 				i++;
 			}
-			System.out.println("\n다시 한번 잘 생각해 보세요^^");
-		}
+			
+			if ( i == 5) {
+				System.out.println(" 5 번째 못 맞춤 실패!");
+				break;
+			}
+			System.out.println("다시 한번 잘 생각해 보세요^^");
+		}// end while
 	}
 }
