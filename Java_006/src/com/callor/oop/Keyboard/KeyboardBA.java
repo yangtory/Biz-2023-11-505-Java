@@ -2,7 +2,7 @@ package com.callor.oop.Keyboard;
 
 import java.util.Scanner;
 
-public class KeboardBA {
+public class KeyboardBA {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);

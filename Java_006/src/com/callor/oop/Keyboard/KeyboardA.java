@@ -17,8 +17,8 @@ public class KeyboardA {
 		
 		// 짝수 나열 못함
 		for (int i = 0; i < num; i++) {
-			if (num % 2 == 0) {
-				System.out.print(num);
+			if ((i+1) % 2 == 0) {
+				System.out.printf("%d ", i+1);
 			}
 		}
 //		System.out.printf(" %d",num);
