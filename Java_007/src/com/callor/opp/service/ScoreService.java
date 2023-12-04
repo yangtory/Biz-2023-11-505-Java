@@ -11,7 +11,7 @@ public class ScoreService {
 	
 	/*
 	 * ScoreService 클래스에 
-	 * 		getScoreService(),getScoreAvg() method 를 선언하고
+	 * 		getScoreTotal(),getScoreAvg() method 를 선언하고
 	 * 		총점과 평균을 각각 계산하여 return 하도록 하고 있다
 	 * 		scoreTotal 변수와, scoreAvg 변수는
 	 * 		총점과 평균을 계산하는 용도로 사용중이다

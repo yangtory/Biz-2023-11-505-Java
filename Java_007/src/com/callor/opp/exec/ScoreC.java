@@ -15,8 +15,6 @@ public class ScoreC {
 			scores[i] = new ScoreService();
 		}
 		
-		// 변수 선언 필요업듬
-
 		for (int i = 0; i < scores.length; i++) {
 			//scores[i].scoreKor 임
 			scores[i].scoreKor = (int) (Math.random() * 50) + 51;
@@ -24,5 +22,18 @@ public class ScoreC {
 			scores[i].scoreMath = (int) (Math.random() * 50) + 51;
 		}
 		//배열에 저장된 점수 화면에 출력하기
+		System.out.println("=".repeat(50));
+		System.out.println("국어\t영어\t수학\t총점\t평균");
+		System.out.println("-".repeat(50));
+
+		for(int i = 0 ; i < scores.length; i++) {
+			System.out.printf("%3d\t",scores[i].scoreKor);
+			System.out.printf("%3d\t",scores[i].scoreEng);
+			System.out.printf("%3d\t ",scores[i].scoreMath);
+			System.out.printf("%3d\t",scores[i].getScoreTotal());
+			System.out.printf("%5.2f\n",scores[i].getScoreAvg());
+		}
+		
+		 
 	}
 }
