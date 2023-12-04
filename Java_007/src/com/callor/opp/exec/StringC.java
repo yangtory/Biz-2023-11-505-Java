@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.Scanner;
 
+import com.callor.opp.service.ScoreService;
 import com.callor.opp.utils.Line;
 
 public class StringC {
@@ -46,10 +47,11 @@ public class StringC {
 			}
 			
 			int[] sum = new int[result.length]; 
-			for(int i = 1 ; i < result.length ; i++) {
+			int i = 0;
+			for(i = 1 ; i < result.length ; i++) {
 				sum[i] += Integer.valueOf(result[i]);
-				System.out.println(sum[i]);
 			}
+			System.out.println(sum[i]);
 //			System.out.println(line); // 한줄 실행할때 마다 데이터를 가져옴
 		}
 		scan.close(); //파일에서는 클로즈 해주는것이 좋다.
