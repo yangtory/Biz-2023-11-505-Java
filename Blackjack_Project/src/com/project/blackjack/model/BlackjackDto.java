@@ -15,6 +15,5 @@ public class BlackjackDto {
 	public String cardJ;
 	public String cardQ;
 	public String cardK;
-	
 
 }
