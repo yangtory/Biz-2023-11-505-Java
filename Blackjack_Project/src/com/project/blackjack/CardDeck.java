@@ -5,7 +5,7 @@ public class CardDeck {
 
 	public CardDeck() {
 		
-		
+		int[]cardDeck = new int[52];
 		
 	}
 
