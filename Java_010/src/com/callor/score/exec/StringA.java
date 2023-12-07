@@ -15,9 +15,6 @@ public class StringA {
 			// printf 와 아주 흡사
 			String strNum = String.format("S%05d", num);
 			System.out.println(strNum);
-		
-
 		}
 	}
-
 }
