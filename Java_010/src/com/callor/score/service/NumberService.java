@@ -1,7 +1,10 @@
 package com.callor.score.service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
+import com.callor.score.model.ScoreDto;
 import com.callor.score.utils.Line;
 
 public class NumberService {
@@ -17,6 +20,7 @@ public class NumberService {
 	 * 생성자에서 초기화한다
 	 */
 	private Scanner scan = null;
+	
 	public NumberService() {
 		scan = new Scanner(System.in);
 	}
@@ -57,5 +61,7 @@ public class NumberService {
 			}
 			return num;
 		}
-	}
+	} // end inputNumber
+	
+	
 }
