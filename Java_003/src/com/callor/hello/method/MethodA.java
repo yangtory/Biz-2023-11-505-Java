@@ -17,7 +17,7 @@ public class MethodA {
 	 * 코드가 실행된다.
 	 * 주로 main() method 에서 호출한다.
 	 */
-	// void add() : return type 이 void 인 add() method
+	// void add() : return type 이 void 인 add() method (void : 리턴 타입이 없다)
 	public static void add() {
 		int num1 = 30;
 		int num2 = 40;

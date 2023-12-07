@@ -2,7 +2,7 @@ package com.callor.algorithm.exec;
 
 import com.callor.algorithm.service.NumberService;
 import com.callor.algorithm.utils.Line;
-
+//삼각형 거꾸로 찍기
 public class NumbersC {
 
 	public static void main(String[] args) {

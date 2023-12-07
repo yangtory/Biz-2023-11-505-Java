@@ -53,7 +53,7 @@ public class StringC {
 			}
 			System.out.println(sum[i]);
 //			System.out.println(line); // 한줄 실행할때 마다 데이터를 가져옴
-		}
+		}// end while
 		scan.close(); //파일에서는 클로즈 해주는것이 좋다.
 	}
 
