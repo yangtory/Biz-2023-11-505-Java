@@ -1,4 +1,4 @@
-package com.callor.score.exec;
+package com.callor.score.exec.scores;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +52,7 @@ public class ScoreCA {
 		System.out.println("국어\t영어\t수학\t총점\n");
 		Line.sLine(50);
 		for(int i = 0 ; i < scores.size() ; i++) {
-			ScoreDto dto = scores.get(i);
+			ScoreDto dto = scores.get(i); // 출력할때 새로운 dto
 			System.out.printf("%d\t",dto.kor);
 			System.out.printf("%d\t",dto.eng);
 			System.out.printf("%d\t",dto.math);
