@@ -10,21 +10,6 @@ public class ScoreDto {
 	public int scoremusic;
 	public int scoreart;
 	
-	public int kortotal;
-	public int engtotal;
-	public int mathtotal;
-	public int musictotal;
-	public int arttotal;
-	public int totalTotal;
-	
-	public float koravg;
-	public float engavg;
-	public float mathavg;
-	public float musicavg;
-	public float artavg;
-	public float avgavg;
-	public float totalavg;
-	
 	private int total;
 	private float avg;
 	

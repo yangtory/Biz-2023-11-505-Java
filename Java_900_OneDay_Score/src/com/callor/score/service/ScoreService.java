@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.callor.score.model.ScoreDto;
+import com.callor.score.model.ScoreTotalAvgDto;
 import com.callor.score.utils.Line;
 
 public class ScoreService {
@@ -11,11 +12,13 @@ public class ScoreService {
 	// 선언
 	private List<ScoreDto> scores = null;
 	private ScoreDto total = null;
+	private ScoreTotalAvgDto totalAvg = null;
 
 	// 초기화
 	public ScoreService() {
 		scores = new ArrayList<ScoreDto>();
 		total = new ScoreDto();
+		totalAvg = new ScoreTotalAvgDto();
 	}
 
 	// 10명의 학생 학번 만들고 점수 random() 으로 만들어 dto 에 넣기
@@ -26,7 +29,7 @@ public class ScoreService {
 			// 학번
 			int intStdNum = Integer.valueOf(strStdNum.substring(2));
 			intStdNum++;
-			strStdNum = String.format("23%04d", intStdNum);
+			strStdNum = String.format("23%03d", intStdNum);
 
 			// 점수
 			ScoreDto scoreDto = new ScoreDto();
@@ -38,29 +41,29 @@ public class ScoreService {
 			scoreDto.stdNum = strStdNum;
 
 			scores.add(scoreDto);
-
+				
 			// 과목별 총점
-			total.kortotal += scoreDto.scorekor;
-			total.engtotal += scoreDto.scoreeng;
-			total.mathtotal += scoreDto.scoremath;
-			total.musictotal += scoreDto.scoremusic;
-			total.arttotal += scoreDto.scoreart;
-			total.totalTotal += scoreDto.getTotal();
+			totalAvg.kortotal += scoreDto.scorekor;
+			totalAvg.engtotal += scoreDto.scoreeng;
+			totalAvg.mathtotal += scoreDto.scoremath;
+			totalAvg.musictotal += scoreDto.scoremusic;
+			totalAvg.arttotal += scoreDto.scoreart;
+			totalAvg.totalTotal += scoreDto.getTotal();
 
 			// 과목별 평균
-			total.koravg = total.kortotal / students;
-			total.engavg = total.engtotal / students;
-			total.mathavg = total.mathtotal / students;
-			total.musicavg = total.musictotal / students;
-			total.artavg = total.arttotal / students;
-			total.totalavg = total.totalTotal / students;
+			totalAvg.koravg = totalAvg.kortotal / students;
+			totalAvg.engavg = totalAvg.engtotal / students;
+			totalAvg.mathavg = totalAvg.mathtotal / students;
+			totalAvg.musicavg = totalAvg.musictotal / students;
+			totalAvg.artavg = totalAvg.arttotal / students;
+			totalAvg.totalavg = totalAvg.totalTotal / students;
 		} // end for
 	}// end input
 
 	public void printScore() {
 		ScoreService service = new ScoreService();
 		Line.dLine(70);
-		System.out.println("*한울 고교 새별 반 성적 리스트 *");
+		System.out.println("* 한울 고교 새별 반 성적 리스트 *");
 		Line.dLine(70);
 		System.out.println("학번\t국어\t영어\t수학\t음악\t미술\t총점\t평균");
 		Line.sLine(70);
@@ -79,11 +82,10 @@ public class ScoreService {
 		}
 		
 		Line.sLine(70);
-		ScoreDto dto = new ScoreDto();
-		System.out.printf("총점\t%d\t%d\t%d\t%d\t%d\t%d\n", total.kortotal, total.engtotal, total.mathtotal,
-				total.musictotal, total.arttotal, total.totalTotal);
-		System.out.printf("평균\t%5.2f\t%5.2f\t%5.2f\t%5.2f\t%5.2f\t\t%5.2f\n", total.koravg, total.engavg, total.mathavg,
-				total.musicavg, total.artavg, total.totalavg);
+		System.out.printf("총점\t%d\t%d\t%d\t%d\t%d\t%d\n", totalAvg.kortotal, totalAvg.engtotal, totalAvg.mathtotal,
+				totalAvg.musictotal, totalAvg.arttotal, totalAvg.totalTotal);
+		System.out.printf("평균\t%5.2f\t%5.2f\t%5.2f\t%5.2f\t%5.2f\t\t%5.2f\n", totalAvg.koravg, totalAvg.engavg, totalAvg.mathavg,
+				totalAvg.musicavg, totalAvg.artavg, totalAvg.totalavg);
 		Line.dLine(70);
 	}
 
