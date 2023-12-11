@@ -13,4 +13,8 @@ public class StudentDto {
 	public String tel;
 	public String addr;
 	
+//	public String toString() {
+//		return num + name + dept + grade + tel + addr ;
+//	}
+	
 }
