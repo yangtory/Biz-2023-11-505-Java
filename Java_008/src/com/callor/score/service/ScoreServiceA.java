@@ -66,7 +66,6 @@ public class ScoreServiceA {
 			scoreDto.art = Integer.valueOf(lines[5]);
 			scoreDto.sw = Integer.valueOf(lines[6]);
 			scoreDto.db = Integer.valueOf(lines[7]);
-		
 		}
 	} // end loadScore(), 메서드 안에는 메서드를 만들수 없음
 	
