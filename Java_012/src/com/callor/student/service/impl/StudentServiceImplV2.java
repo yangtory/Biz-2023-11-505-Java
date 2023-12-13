@@ -5,7 +5,7 @@ import com.callor.student.service.StudentService;
 public class StudentServiceImplV2 implements StudentService {
 
 	@Override
-	public boolean inpuStudent() {
+	public boolean inputStudent() {
 		// TODO Auto-generated method stub
 		return false;
 	}

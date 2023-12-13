@@ -10,13 +10,15 @@ package com.callor.student.models;
  * 
  */
 
-public enum Stindex {
+public enum StdIndex {
 	학번(0), 이름(1), 학과(2), 학년(3), 전화번호(4), 주소(5) ; // 배열선언
+	
 	private int index;
-	private Stindex(int index) {
+	StdIndex(int index) { // 생성자
 		this.index = index;	
 	}
 	
+	//외부에서 쓸수있도록 만든 칭구
 	public int getIndex() {
 		return index;
 	}

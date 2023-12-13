@@ -16,7 +16,7 @@ public interface StudentService {
 	
 	// class 를 설계할때 참조할 method 의 prototype 정의
 	// 코드 블럭( {} ) 없다
-	public boolean inpuStudent();
+	public boolean inputStudent();
 	public void inputStudents();
 	public void loadStudent();
 	public void printStudent();
