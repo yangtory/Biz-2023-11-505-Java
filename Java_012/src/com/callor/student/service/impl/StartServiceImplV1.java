@@ -35,7 +35,7 @@ public class StartServiceImplV1 implements StartService {
 	//stService 를 주입받도록 
 	public StartServiceImplV1(StudentService stService) {
 		scan = new Scanner(System.in);
-		this.stService = stService; //new StudentServiceImplV1();
+		this.stService = stService;
 	}
 
 	@Override
