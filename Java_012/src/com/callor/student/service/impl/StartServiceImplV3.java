@@ -9,7 +9,6 @@ public class StartServiceImplV3 extends StartServiceImplV2 {
 		// 상속받은 StartServiceImplV2 의 생성자를 호출하기
 		super(stService);
 		// this.stService = stService; 2에서 받아오는거라 수퍼에만 쓰면됨 
-		
 	}
 
 	// App 이 시작되면 student.txt 파일에 저장된 학생정보를 가져오기
