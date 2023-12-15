@@ -21,6 +21,7 @@ public class StudentServiceImplV2 extends StudentServiceImplV1 {
 		// 두 번째 생성자에게 파일의 경로를 전달하는 역할 실행 
 		// 문자열 매개변수를 가지고 있는 또 다른 생성자에게 전달
 		this("src/com/callor/student/data/student.txt");
+		// 밑의 2번째 생성자를 호출해서 매개변수에 이 string 을 넣는다
 	}
 	public StudentServiceImplV2(String stDataFile) {
 		// V1 의 생성자를 호출하여 키보드 scan 을 사용할수 있도록 준비 해주고

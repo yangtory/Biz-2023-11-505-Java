@@ -10,6 +10,7 @@ public class StartServiceImplV2 extends StartServiceImplV1 {
 		// V1 의 생성자를 호출하여 V1 생성자에 있는
 		// 코드를 그대로 실행하겠다
 		super(stService); // 수퍼() 이친구는 항상 생성자 제일 첫번째로 있어야함
+		// V1의 생성자에 stService 를 전달하고 V1에서 초기화 
 		// ImpV1 에서는 St...serivceImpV1 을 사용하여
 		// stService 를 초기화 하였다
 		// 하지만 여기에서는 ImplV2 를 사용하고 싶다
