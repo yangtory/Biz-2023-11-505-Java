@@ -11,6 +11,7 @@ import com.callor.student.models.StudentDto;
 import com.callor.student.service.StudentService;
 import com.callor.student.utils.Line;
 
+// 이름의 일부만 적어도 출력되게 해보기 
 public class StudentServiceImplV1 implements StudentService {
 	private Scanner scan = null;
 	private List<StudentDto> students = null;
@@ -39,10 +40,11 @@ public class StudentServiceImplV1 implements StudentService {
 				System.out.println("이름을 다시 입력해주세요");
 				continue;
 			}
-			StudentDto dto = this.selectStdName(stdDto.name);
-			if (dto == null) {
-				this.printStd(inputStr);
-				continue;
+			
+			try {
+				this.printStd(inputStr);					
+			} catch (Exception e) {
+				System.out.println("입력된 정보가 없습니다! 다시 입력해주세요.");
 			}
 		}
 	}
@@ -74,6 +76,7 @@ public class StudentServiceImplV1 implements StudentService {
 			String line = fileScan.nextLine();
 			String[] stds = line.split(",");
 
+			// enum 만들어서 해보기
 			StudentDto dto = new StudentDto();
 			dto.num = stds[0];
 			dto.name = stds[1];
@@ -89,7 +92,6 @@ public class StudentServiceImplV1 implements StudentService {
 	@Override
 	public void printStd(String inputStr) {
 		StudentDto dtoStd = this.selectStdName(inputStr);
-		Line.dLine(80);
 		System.out.printf("학번 : %s \n", dtoStd.num);
 		System.out.printf("이름 : %s \n", dtoStd.name);
 		System.out.printf("학과 : %s \n", dtoStd.dept);
