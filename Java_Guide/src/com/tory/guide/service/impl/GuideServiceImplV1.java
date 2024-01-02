@@ -48,24 +48,19 @@ public class GuideServiceImplV1 implements GuideService {
 
 	@Override
 	public void printGuideList() {
+//		this.loadGuide();
 		Line.dLine(100);
 		System.out.println("id\t종목명\t\t\t\t순서\t\t방법");
-		Line.sLine(100);
-
-		for (int i = 0; i < guideList.size(); i++) {
-			if ((i - 1) >= 1) {
-			} else if (guideList.get(i - 1).id.equals(guideList.get(i).id)) {
+		for(int i = 1 ; i < guideList.size() ; i++) {
+			if(!guideList.get(i-1).id.equals(guideList.get(i).id)) {
 				Line.sLine(100);
-
 			}
-			GuideDto dto = new GuideDto();
+			GuideDto dto = guideList.get(i);
 			System.out.printf("%s\t", dto.id);
 			System.out.printf("%s\t\t\t", dto.list);
 			System.out.printf("%s 회\t\t", dto.num);
 			System.out.printf("%s\n", dto.guide);
-		}
+		}//end for
 		Line.dLine(100);
 	}
-
-	
 }
